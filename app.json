@@ -25,6 +25,16 @@
         "backgroundColor": "#FFFFFF"
       }
     },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow toyota1 to access your photos.",
+          "savePhotosPermission": "Allow toyota1 to save photos.",
+          "isAccessMediaLocationEnabled": "true"
+        }
+      ]
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
     }
