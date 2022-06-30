@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
-function SettingsButton({ style, onPress, text }) {
+function SettingsButton({ style, onPress, text, icon }) {
   return (
     <TouchableOpacity
       style={[
@@ -17,7 +17,7 @@ function SettingsButton({ style, onPress, text }) {
       onPress={onPress}
       text={text}
     >
-      <Text>{text}</Text>
+      <Text style={{ color: '#1e2022' }}>{icon && icon}  {text}</Text>
     </TouchableOpacity>
   );
 }
