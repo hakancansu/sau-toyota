@@ -16,8 +16,12 @@ const NetworkInfoProvider = ({ children }) => {
     setConnected();
   }, []);
 
+  const value = React.useMemo(() => ({
+    connect, setConnected, strength, setConnectStrength, setConnect,
+  }), [connect, strength, connect]);
+
   return (
-    <NetworkInfoContext.Provider value={{ connect, setConnected, strength, setConnectStrength }}>
+    <NetworkInfoContext.Provider value={value}>
       {children}
     </NetworkInfoContext.Provider>
   );
